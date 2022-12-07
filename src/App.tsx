@@ -1,12 +1,25 @@
+import './global.css';
+
 import { Header } from "./components/Header"
 import { Sidebar } from "./components/Sidebar";
 import { Post } from "./components/Post";
-
 import styles from './App.module.css'
 
-import './global.css';
+interface PostsProps {
+  id: number,
+  author: {
+    avatarUrl: string,
+    name: string,
+    role: string,
+  },
+  content: {
+    type: 'paragraph' | 'link';
+  content: string;
+  }[],
+  publishedAt: Date
+}[]
 
-const posts = [
+const posts: PostsProps[] = [
   {
     id: 1,
     author: {
