@@ -2,7 +2,7 @@ import './global.css';
 
 import { Header } from "./components/Header"
 import { Sidebar } from "./components/Sidebar";
-import { Post } from "./components/Post";
+import { Content, Post } from "./components/Post";
 import styles from './App.module.css'
 
 interface PostsProps {
@@ -12,10 +12,7 @@ interface PostsProps {
     name: string,
     role: string,
   },
-  content: {
-    type: 'paragraph' | 'link';
-  content: string;
-  }[],
+  content: Content[],
   publishedAt: Date
 }[]
 
